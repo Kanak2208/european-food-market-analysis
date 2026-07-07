@@ -1,7 +1,7 @@
 # European Food Market Analysis
 
 Analysing the packaged-food market across **Europe's 10 largest economies** using the
-[Open Food Facts](https://world.openfoodfacts.org) open database — combining a Python
+[Open Food Facts](https://world.openfoodfacts.org) open database - combining a Python
 data pipeline, a normalized MySQL database, an XGBoost prediction model, and interactive
 Tableau dashboards.
 
@@ -13,12 +13,12 @@ Tableau dashboards.
 
 ## The question
 
-> **How healthy is Europe's packaged food — and can we predict it?**
+> **How healthy is Europe's packaged food - and can we predict it?**
 
 Three angles answer it:
-1. **Compare the markets** — how food quality, processing, and nutrition differ across 10 countries
-2. **Predict the Nutri-Score** — can a model assign a grade (A–E) from nutrition facts alone?
-3. **Link food to economics** — does a country's wealth track how healthy its food catalogue is?
+1. **Compare the markets** - how food quality, processing, and nutrition differ across 10 countries
+2. **Predict the Nutri-Score** - can a model assign a grade (A–E) from nutrition facts alone?
+3. **Link food to economics** - does a country's wealth track how healthy its food catalogue is?
 
 ---
 
@@ -27,12 +27,12 @@ Three angles answer it:
 - **Europe's packaged food skews unhealthy.** Across all 10 markets, grades D and E dominate
   the catalogue, and A/B (the healthiest) form only a thin top band.
 - **Wealth does *not* predict healthier food.** Comparing GDP per capita against average
-  Nutri-Score shows no meaningful relationship — the richest markets (Switzerland, Netherlands)
+  Nutri-Score shows no meaningful relationship - the richest markets (Switzerland, Netherlands)
   sit at the same grade level as much poorer ones, pushing back on the intuitive
   "richer = healthier" assumption.
 - **Sugar is the clearest driver of grade.** Average sugar climbs steadily from grade A to E.
 - **An XGBoost classifier predicts the Nutri-Score grade with 85.6% accuracy** on held-out
-  products. Its strongest predictors — high sugar, high salt, high saturated fat — mirror how
+  products. Its strongest predictors - high sugar, high salt, high saturated fat - mirror how
   the official Nutri-Score is actually calculated, confirming the model learned the right
   patterns. Errors are almost entirely between *adjacent* grades.
 
@@ -56,7 +56,7 @@ Three angles answer it:
 
 ## Database schema
 
-The flat extract is normalized into a small star schema — `products` (one row per barcode),
+The flat extract is normalized into a small star schema - `products` (one row per barcode),
 `countries` (market + GDP), `nutriscore_grades` (A–E lookup), and `product_markets` (a bridge
 table modelling the many-to-many between products and the markets that sell them).
 
@@ -89,7 +89,7 @@ Tableau                 3 linked dashboards + a landing page
 ```
 
 An additional `extract_api.py` demonstrates live Open Food Facts API consumption
-(rate-limited) on a small sample — a complement to the bulk Parquet extraction.
+(rate-limited) on a small sample - a complement to the bulk Parquet extraction.
 
 ---
 
@@ -113,7 +113,7 @@ An additional `extract_api.py` demonstrates live Open Food Facts API consumption
 ```
 
 > **Note:** the raw and processed data files (`data/`, `*.csv`, `*.parquet`) are **not**
-> included in the repo — they are large and fully reproducible by running the pipeline
+> included in the repo - they are large and fully reproducible by running the pipeline
 > below. The dashboards are hosted live on Tableau Public (link above).
 
 ---
@@ -159,5 +159,5 @@ GDP figures: IMF World Economic Outlook (2025 nominal estimates).
 
 ## Author
 
-**Kanak Yadav** — Data Analyst
+**Kanak Yadav** - Data Analyst
 [Portfolio](https://kanak2208.github.io) · [LinkedIn](https://www.linkedin.com/in/kanakyadav22) · [GitHub](https://github.com/Kanak2208)
