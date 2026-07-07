@@ -1,9 +1,9 @@
 .env
-sample_data.py
+
 data/
 *.csv
 *.parquet
 *.db
 *.sqlite
 dash.ipynb
-extract_api.py
+
