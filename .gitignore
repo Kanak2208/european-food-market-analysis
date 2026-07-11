@@ -7,3 +7,5 @@ data/
 *.sqlite
 dash.ipynb
 
+.DS_Store
+**/.DS_Store
