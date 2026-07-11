@@ -7,6 +7,8 @@ Tableau dashboards.
 
 ### 🔗 [View the live interactive dashboards on Tableau Public →](https://public.tableau.com/views/EuropeanFoodMarketAnalysis/HOME)
 
+### 📊 [View the presentation slides →](https://docs.google.com/presentation/d/1THOODetxt9V5P4P9ZXrM3AzvR1Dh85dn2vmCU432KgM/edit?usp=sharing)
+
 **Stack:** Python · SQL (MySQL) · DuckDB · XGBoost · Tableau
 
 ---
